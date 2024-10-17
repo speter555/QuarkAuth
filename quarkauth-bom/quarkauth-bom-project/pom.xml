@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>hu.speter555.quarkauth</groupId>
+        <artifactId>quarkauth-bom</artifactId>
+        <version>0.1.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>quarkauth-bom-project</artifactId>
+    <packaging>pom</packaging>
+
+
+    <dependencyManagement>
+        <dependencies>
+
+            <!-- Project apis -->
+            <dependency>
+                <groupId>hu.speter555.quarkauth</groupId>
+                <artifactId>quarkauth-api-schema</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>hu.speter555.quarkauth</groupId>
+                <artifactId>quarkauth-api-dto</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>hu.speter555.quarkauth</groupId>
+                <artifactId>quarkauth-api-grpc</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>hu.speter555.quarkauth</groupId>
+                <artifactId>quarkauth-api-jakarta</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <!-- Common modules -->
+
+
+            <!-- Client -->
+
+
+        </dependencies>
+    </dependencyManagement>
+</project>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns="http://super.dto.api.quarkauth.speter555.hu/super"
+        targetNamespace="http://super.dto.api.quarkauth.speter555.hu/super"
+        elementFormDefault="qualified" attributeFormDefault="unqualified"
+>
+
+</xsd:schema>
