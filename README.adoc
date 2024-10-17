@@ -1,12 +1,53 @@
-:toc: left
-:toclevels: 4
-:sectnums:
-:sectnumlevels: 4
-:sectanchors:
-:icons: font
-
-
 = QuarkAuth
+
+image:https://img.shields.io/github/actions/workflow/status/speter555/QuarkAuth/compile_maven.yml?branch=main&logo=GitHub&style=plastic[Compile status,link=https://github.com/speter555/QuarkAuth/actions/workflows/compile_maven.yml?query=branch%3Amain]
+image:https://img.shields.io/github/v/release/speter555/QuarkAuth[Maven central version of Parent pom project]
+image:https://img.shields.io/github/license/speter555/QuarkAuth?style=plastic&logo=apache[License of Parent pom project]
+image:https://img.shields.io/badge/Use_JakartaEE_10+-project-brightgreen.svg?style=plastic&logo=jakartaee[Use JakartaEE project]
+image:https://img.shields.io/github/commit-activity/m/speter555/QuarkAuth.svg?label=Commits&style=plastic&logo=git&logoColor=white[Commits]
+image:https://img.shields.io/badge/JVM-17-brightgreen.svg?style=plastic&logo=openjdk[Supported jvms]
+image:https://img.shields.io/github/stars/speter555/QuarkAuth?style=plastic[GitHub Repo Stars,link=https://github.com/i-Cell-Mobilsoft-Open-Source/quarkus-sample/stargazers]
+
+== General
 
 This project is a microservice what is use Quarkus 3+ framework and do autentication and autorization with Keycloak.
 
+NOTE: Documentation: `https://speter555.github.io/QuarkAuth/`
+
+== Used technologies
+
+* Coffee 2.9+ +
+JavaEE solution set aimed at gathering common algorithms used in the enterprise world, providing basic solutions that can be customized to meet our specific needs (https://github.com/i-Cell-Mobilsoft-Open-Source/coffee) +
+
+* Java 17+
+* Maven 3.9.7+
+* Jakarta EE 10+
+* CDI 4.0+
+* Microprofile 6.0+
+* Quarkus 3.15+
+
+
+== Testing
+The endpoints are not authenticated; you can use the SwaggerUI page.
+Unfortunately, due to the complexity of the API, it won't work well in XML format because of XML namespace issues.
+Therefore, it's better to use JSON format for this.
+
+.Developer tests - quarkauth-testsuite
+`cd quarkauth-testsuite`
+
+The developer tests use the https://github.com/i-Cell-Mobilsoft-Open-Source/roaster[Roaster] project.
+This performs completely autonomous REST external calls to the deployed application.
+It can be run directly from the developer UI (JUnit plugin) or using Maven (by activating the 'profile' switch),
+for example:
+
+[source,bash]
+----
+mvn verify -Dprofile <1>
+mvn verify -Dprofile=sandbox,local <2>
+----
+<1> default parameters
+<2> Selected profiles from the configuration files
+
+== Release
+
+Not implemented yet
